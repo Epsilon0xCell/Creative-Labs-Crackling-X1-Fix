@@ -1,3 +1,5 @@
+![Creative-Labs-Crackling-X1-Fix](banner.png)
+
 # New-Solution:
 
 Actually, I have found that you can hack the brain itself into thinking there is no crackling if you play rain sounds from myNoise in the background as you listen to music, they blend together thus there is no crackling and you get to enjoy the atmosphere of rain. Or even better, listen to a fire crackling. I suggest doing a targeted EQ approach with the low treble, treble, and high treble cranked to the point where the crackling is indistinguishable and zeroing out all other frequencies and sounds.
@@ -24,9 +26,9 @@ This project provides a simple shell script to automatically fix frequent audio 
 
 ## Usage
 
-1. **Open Terminal** and navigate to this directory:
+1. **Open Terminal** and navigate to the directory you cloned this repository into:
    ```sh
-   cd /workspaces/Creative-Labs-Crackling-X1-Fix
+   cd Creative-Labs-Crackling-X1-Fix
    ```
 
 2. **Make the script executable** (if not already):
@@ -44,9 +46,13 @@ This project provides a simple shell script to automatically fix frequent audio 
 
 ## Configuration
 
-- Open `creativesoundfix.sh` in a text editor.
-- Change the value of `RESTART_INTERVAL_SECONDS` to set how often the plugin is restarted (in seconds).
-  - Example: `RESTART_INTERVAL_SECONDS=120` (every 2 minutes)
+- By default the interval is randomized between 3 and 5 minutes (180 to 300 seconds) on every cycle.
+- To use a fixed interval instead, set `RESTART_INTERVAL_SECONDS` in the environment when you run the script:
+  ```sh
+  RESTART_INTERVAL_SECONDS=120 ./creativesoundfix.sh
+  ```
+  - Example above: a reset every 120 seconds (every 2 minutes).
+  - The value must be a positive whole number of seconds; the script exits with an error otherwise.
 
 ## Notes
 
