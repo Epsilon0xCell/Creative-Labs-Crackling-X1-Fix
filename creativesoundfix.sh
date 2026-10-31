@@ -39,6 +39,11 @@ if [ -n "$FIXED_INTERVAL_SECONDS" ]; then
         echo "Error: RESTART_INTERVAL_SECONDS must be at least 1, got '${FIXED_INTERVAL_SECONDS}'." >&2
         exit 1
     fi
+    # I normalize the value through 10# so a value typed as 007 is the
+    # number 7 everywhere after this line. Before this pass the banner
+    # printed 007 seconds while sleep read the same string as 7, so the
+    # script disagreed with itself about what it was doing.
+    FIXED_INTERVAL_SECONDS=$((10#$FIXED_INTERVAL_SECONDS))
 fi
 
 # --- Main Execution Loop ---
@@ -93,12 +98,17 @@ while true; do
     if [ "$pkill_status" -eq 0 ]; then
         echo "Successfully sent termination signal to '${PLUGIN_PROCESS_NAME}'."
         echo "macOS will now restart it automatically."
-    else
-        # I do not split pkill failures by kind here. A missing plugin is
-        # the case I actually hit, so every non-zero status gets this one
-        # warning and the loop keeps going. Failing hard would trade a
-        # skipped reset for a dead script, and the next cycle may find
-        # the plugin running again.
+    elif [ "$pkill_status" -eq 1 ]; then
+        # pkill status 1 means no process matched. That is the case I
+        # actually hit, and it gets the not found warning.
         echo "Warning: Process '${PLUGIN_PROCESS_NAME}' not found. It may not have been running."
+    else
+        # Any other status means pkill itself failed (a bad pattern or a
+        # permission problem, for example). Before this pass those also
+        # printed the not found warning, which sent me looking for a
+        # missing plugin when the plugin was fine and the tool was not.
+        # The loop still keeps going either way: failing hard would trade
+        # a skipped reset for a dead script, and the next cycle may work.
+        echo "Warning: pkill failed with status ${pkill_status}; the reset was skipped this cycle."
     fi
 done
