@@ -1,12 +1,27 @@
-![Creative-Labs-Crackling-X1-Fix](banner.png)
+![Introduction: a laid hedge at first light, sheep testing the new wall, one half cut stem catching the sun](intro-banner.png)
 
 # Creative Labs Crackling X1 Fix
+
+<!-- deco -->
+> Hedgerow Laying Season. A boundary being made that will outlive the maker: wait, cut once, let the thing regrow.
+<!-- /deco -->
+
+![Creative-Labs-Crackling-X1-Fix](banner.png)
+
+![Animated cross section along the laid hedge](assets-scene.svg)
+
 
 My Creative Labs audio device crackles on macOS, and the fix that works
 for me is restarting one piece of the audio system on a timer instead of
 rebooting or replugging the device. This repo holds the small shell
 script that does that, plus a masking workaround I used before the
 script, written up at the end.
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label, pressed leaf fixed at the left edge: HOW IT WORKS, entered in label capitals.
+<!-- /deco -->
 
 ## How it works
 
@@ -16,6 +31,12 @@ script, written up at the end.
   which clears the crackling on my machine without a reboot or a
   replug.
 - The script keeps no state files and installs nothing.
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: USAGE, thin upright capitals on damp card.
+<!-- /deco -->
 
 ## Usage
 
@@ -35,6 +56,12 @@ script, written up at the end.
    after one full interval has passed, so starting it does not cut the
    audio right away.
 
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: STOPPING AND REVERSING IT, thin upright capitals on damp card.
+<!-- /deco -->
+
 ## Stopping and reversing it
 
 Press Control+C. That is the whole undo: the script changes no settings,
@@ -42,7 +69,18 @@ writes no files, and installs no launch items, so once it stops, nothing
 it did is left running. Each reset it already performed is also undone
 by macOS itself when the plugin comes back.
 
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: CONFIGURATION, thin upright capitals on damp card.
+<!-- /deco -->
+
 ## Configuration
+
+<!-- deco -->
+> **Field note tied to a stake:** the value must be a positive whole number of seconds; anything else exits with an error before the loop starts.
+<!-- /deco -->
+
 
 - By default the interval is randomized between 3 and 5 minutes (180 to
   300 seconds) on every cycle. I randomize it because a reset on an
@@ -59,8 +97,19 @@ by macOS itself when the plugin comes back.
   they name, so 007 is 7 seconds.
 
 If a reset finds no matching process, the script prints a warning and
+
+<!-- deco -->
+> **Field note tied to a stake:** no matching process prints a warning and the loop continues; a pkill failure names its status.
+<!-- /deco -->
+
 keeps going. If `pkill` itself fails, the warning says so and names the
 status, instead of claiming the plugin was missing.
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: PLATFORM LIMITS, STATED PLAINLY, thin upright capitals on damp card.
+<!-- /deco -->
 
 ## Platform limits, stated plainly
 
@@ -76,12 +125,29 @@ status, instead of claiming the plugin was missing.
   (`python3 -m unittest`). Whether the sound comes back clean on any
   given Mac is not something those tests can show.
 
+<!-- deco -->
+> **Field note tied to a stake:** pkill with the f flag matches any command line containing the plugin name; accept that on a single user machine only.
+<!-- /deco -->
+
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: FILES, thin upright capitals on damp card.
+<!-- /deco -->
+
 ## Files
 
 - `creativesoundfix.sh` - the script
 - `test_creativesoundfix.py` - the test suite described above
 - `banner.png`, `logo.png` - project branding
 - `LICENSE` - MIT license
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: THE MASKING WORKAROUND I USED FIRST, thin upright capitals on damp card.
+<!-- /deco -->
 
 ## The masking workaround I used first
 
@@ -104,6 +170,12 @@ Also here is a custom set I made titled Ambience:
 https://mynoise.net/NoiseMachines/custom.php?l=9969836856565845564500&m=FLOATING0~FLOATING1~FLOATING2~FLOATING3~FIRE7~FLOATING7~FIRE8~FLOATING8~FIRE9~FLOATING9&orig=1&title=Audioambience
 ```
 
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: WHY I DID NOT GO THE DETECTION ROUTE, thin upright capitals on damp card.
+<!-- /deco -->
+
 ## Why I did not go the detection route
 
 An approach that listens for crackling and reacts only then sounds
@@ -113,6 +185,12 @@ false positives stay a problem. The remaining routes were reverse
 engineering the driver, which is a much bigger job, or waiting for
 Creative to fix it. Restarting the plugin on a timer is the option I
 could actually finish, so it is the one in this repo.
+
+![Vine tendril separator](sep-heavy.svg)
+
+<!-- deco -->
+> Herbarium label: DISCLAIMER, thin upright capitals on damp card.
+<!-- /deco -->
 
 ## Disclaimer
 

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 36" role="img" aria-label="Vine tendril separator with one leaf at the centre">
+  <path id="tendril-run" d="M6 20 C 200 6, 340 30, 444 18" fill="none" stroke="#5d7a3a" stroke-width="2.6"/>
+  <path d="M456 18 C 560 8, 700 30, 894 16" fill="none" stroke="#5d7a3a" stroke-width="2.6"/>
+  <path d="M60 20 q10 -12 20 0 q-10 4 -20 0" fill="none" stroke="#5d7a3a" stroke-width="2"/>
+  <path d="M820 17 q10 -12 20 0 q-10 4 -20 0" fill="none" stroke="#5d7a3a" stroke-width="2"/>
+  <path id="centre-leaf" d="M450 18 q-4 -16 12 -20 q3 14 -12 20 q14 2 13 16 q-15 -2 -13 -16" fill="#7ba24a"/>
+</svg>

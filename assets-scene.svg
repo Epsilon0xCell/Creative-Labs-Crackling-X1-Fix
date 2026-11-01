@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Cross section along the laid hedge, animated scene">
+  <rect width="900" height="240" fill="#202b20"/>
+  <rect id="sky-band" width="900" height="86" fill="#aebbb0">
+    <animate attributeName="fill" values="#aebbb0;#8d9a90;#aebbb0" dur="34s" repeatCount="indefinite"/>
+  </rect>
+  <g id="far-tree-line" fill="#141a14">
+    <polygon points="0,86 60,40 74,86 150,30 168,86 300,44 316,86 520,34 538,86 700,46 714,86 900,38 900,86 0,86"/>
+  </g>
+  <g id="rooks-crossing" stroke="#141a14" stroke-width="2.4" fill="none">
+    <path d="M-30 30 q8 -8 16 0 q8 -8 16 0"><animateTransform attributeName="transform" type="translate" values="0 0;960 14" dur="30s" repeatCount="indefinite"/></path>
+    <path d="M-90 48 q7 -7 14 0 q7 -7 14 0"><animateTransform attributeName="transform" type="translate" values="0 0;1020 8" dur="30s" begin="9s" repeatCount="indefinite"/></path>
+  </g>
+  <g id="rain-band" stroke="#7e8c96" stroke-width="2" opacity="0.55">
+    <line x1="640" y1="10" x2="632" y2="30"/><line x1="690" y1="6" x2="682" y2="26"/><line x1="740" y1="12" x2="732" y2="32"/><line x1="790" y1="8" x2="782" y2="28"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;60 0;0 0" dur="26s" repeatCount="indefinite"/>
+  </g>
+  <g id="pleachers-swaying">
+    <g stroke="#3a342c" stroke-width="7">
+      <line x1="60" y1="196" x2="170" y2="140"><animateTransform attributeName="transform" type="rotate" values="0 60 196;1.6 60 196;0 60 196" dur="6s" repeatCount="indefinite"/></line>
+      <line x1="180" y1="196" x2="290" y2="138"><animateTransform attributeName="transform" type="rotate" values="0 180 196;-1.4 180 196;0 180 196" dur="7s" repeatCount="indefinite"/></line>
+      <line x1="300" y1="196" x2="410" y2="142"><animateTransform attributeName="transform" type="rotate" values="0 300 196;1.2 300 196;0 300 196" dur="8s" repeatCount="indefinite"/></line>
+      <line x1="420" y1="196" x2="530" y2="140"><animateTransform attributeName="transform" type="rotate" values="0 420 196;-1.8 420 196;0 420 196" dur="6.5s" repeatCount="indefinite"/></line>
+    </g>
+    <g stroke="#8a6d42" stroke-width="5">
+      <line x1="90" y1="200" x2="94" y2="118"/><line x1="220" y1="200" x2="224" y2="116"/><line x1="350" y1="200" x2="354" y2="118"/><line x1="480" y1="200" x2="484" y2="116"/>
+    </g>
+    <line x1="60" y1="126" x2="560" y2="120" stroke="#a8895a" stroke-width="4"/>
+    <g id="berries-still" fill="#c43e8c"><circle cx="392" cy="128" r="5"/><circle cx="402" cy="134" r="4"/><circle cx="394" cy="138" r="4"/></g>
+    <path id="fern-unfurling" d="M600 210 q6 -34 26 -44" fill="none" stroke="#a85c34" stroke-width="3">
+      <animate attributeName="d" values="M600 210 q2 -10 8 -14;M600 210 q6 -34 26 -44;M600 210 q6 -34 26 -44;M600 210 q2 -10 8 -14" dur="24s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <g id="litter-flecks" fill="#d8a04c">
+    <circle cx="80" cy="222" r="3"><animate attributeName="opacity" values="0.25;1;0.25" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="228" r="2.6"><animate attributeName="opacity" values="0.25;1;0.25" dur="5s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="330" cy="220" r="3"><animate attributeName="opacity" values="0.25;1;0.25" dur="5s" begin="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="226" r="2.6"><animate attributeName="opacity" values="0.25;1;0.25" dur="5s" begin="3.6s" repeatCount="indefinite"/></circle>
+  </g>
+  <g id="stool-rings" fill="none" stroke="#c8a86a">
+    <ellipse cx="700" cy="206" rx="30" ry="10"><animate attributeName="opacity" values="0;0.8;0" dur="12s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="700" cy="206" rx="19" ry="6"><animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="2s" repeatCount="indefinite"/></ellipse>
+    <ellipse cx="700" cy="206" rx="9" ry="3"><animate attributeName="opacity" values="0;0.8;0" dur="12s" begin="4s" repeatCount="indefinite"/></ellipse>
+  </g>
+  <g id="near-trimmings">
+    <g stroke="#241f1a" stroke-width="5"><line x1="10" y1="232" x2="120" y2="218"/><line x1="26" y1="238" x2="140" y2="226"/></g>
+    <g fill="none" stroke="#c4bda8" stroke-width="4"><ellipse cx="812" cy="222" rx="34" ry="10"/><ellipse cx="812" cy="222" rx="22" ry="6"/></g>
+    <g id="layer-shadow" opacity="0">
+      <polygon points="0,240 60,150 92,150 120,240" fill="#0c100c"/>
+      <animateTransform attributeName="transform" type="translate" values="-140 0;980 0" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0.5;0" keyTimes="0;0.2;0.8;1" dur="22s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>
